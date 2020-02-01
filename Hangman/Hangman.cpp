@@ -20,7 +20,7 @@ void seperator() {
 
 bool playAgain() {
 	std::cout << std::endl;
-	std::cout << "Wanna play again?(y/n): ";
+	std::cout << "Wanna play again?(y/n): " << std::endl;
 	std::string yesNo;
 	bool responce; 
 	while (true) {
@@ -49,7 +49,7 @@ bool playAgain() {
 
 char chooseLetter() {
 	std::string chosenLetter;
-	std::cout << "Choose a letter(No caps): ";
+	std::cout << "Choose a letter(No caps): " << std::endl;
 	while (true) {
 		std::cin >> chosenLetter;
 		if (std::cin.good() && isalpha(chosenLetter[0]) && chosenLetter[0] >= 'a' && chosenLetter[0] <= 'z' && chosenLetter.size()  == 1) {
@@ -106,7 +106,7 @@ void displayUI(std::vector<std::string> phangman, int pLife, std::string pHidden
 
 void startGame() {
 	//Ask for the secret word//////////////////////////////////////
-	std::cout << "Choose a secret word: ";
+	std::cout << "Choose a secret word: " << std::endl;
 	secretWord = new SecretWord();
 	std::cout << std::endl;
 	seperator();
@@ -118,7 +118,7 @@ void startGame() {
 			seperator();
 			std::cout << "ERROR: INVALID INPUT*" << std::endl;
 		}
-		std::cout << "How many chances do you get?(Max 7): ";
+		std::cout << "How many chances do you get?(Max 7): " << std::endl;
 		std::cin >> lifes;
 		if (!std::cin.good() || !(lifes > 0) || !(lifes <= 7)) {
 			std::cin.clear();
